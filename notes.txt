@@ -1,0 +1,9 @@
+when we intsall flask a module named flask is installed
+modules alwys have lower case
+inside module flask there is a class named Flask
+an app is obj of class flask
+
+we are importing a class and then we are creating an obj of the class
+
+we register a route using @app , @: decorator in python used in lib to provide addiional functionality
+"/" : empty route
