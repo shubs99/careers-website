@@ -1,66 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title> Jovian Careers</title>
-    <style>
-        h1{
-          font-size: 40px;
-          font-weight: normal;
-          font-family: Roboto;
-          color: rgb(100,100,100);
-          text-align: center;
-  }
-      #img{
-        width: 100%;
-        height: 360px;
-        object-fit: cover;
-      }
-       
-      h2{
-        font-family: Roboto;
-        height: 32px;
-        color: rgb(100,100,100);
-        text-align: center;
-        font-weight: normal;
-      }
-      p{
-        font-family: Roboto;
-        color: rgb(80,80,80);
-      }
-      
-        #container{
-          max-width: 720px;
-          margin-left: 200px;
-          margin: 0 auto 0 auto;
-        }
-      
-    </style>
+   <style>
+     #img{
+       height: 320px;
+       object-fit:cover;
+       width:100%;
+     }
+   </style>
   
   </head>
   <body>
     
-    <div id="container">
+    <div class="container">
       
-    <h1>Jovian Careers</h1>
+    <h1 class="text-center mt-2 mb-2">{{company_name}} Careers</h1>
       
-    <img id  ="img" src="https://careers-website.shubhangibhatt1.repl.co/static/img.jpg"
-      height = 320>
+    <img class="img-fluid" id  ="img" src="https://careers-website.shubhangibhatt1.repl.co/static/img.jpg" height: 320px>
       
-   <h2>About Jovian</h2>
+   <h2 class="text-center mt-4 mb-2">About Jovian</h2>
       
-    <p>
+    <p  class="lead">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum neque egestas congue quisque. Nisi lacus sed viverra tellus in hac habitasse. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Dolor morbi non arcu risus quis varius quam. Vitae aliquet nec ullamcorper sit. At auctor urna nunc id cursus. Eget mauris pharetra et ultrices neque ornare aenean. Non consectetur a erat nam at lectus urna. Quam viverra orci sagittis eu volutpat odio facilisis. Aliquet enim tortor at a
     </p>
-      
-    <h2>Job Openings</h2>
-      
-    <p>
-      todo - show jobs here
-    </p>
-
-      <div style="text-align:center">
-    <button> Contact Us </button>
-      </div>
+        
+      <h2 class="text-center mt-2 mb-2"">Job Openings</h2>
+        
+    <div>
+          
+        {% for job in jobs %}
+        {% include 'jobitem.html' %}
+        {% endfor%}
+          
+    </div>
+    
+    <div class="text-center d-grid gap-2 d-md-block">
+    <button class="btn btn-primary" type="button"> Contact Us </button>
+      <p>copyright, 2022</p>
+    </div>
   </div>
  </body>
 </html>
